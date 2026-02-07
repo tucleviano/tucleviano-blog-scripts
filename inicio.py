@@ -32,7 +32,7 @@ def main():
         # A variável keys armazena o status de cada tecla do teclado.
         keys = pygame.key.get_pressed()
 
-        # Movimentação do bloco (FALTA DESCREVER ISSO)
+        # Movimentação do bloco
         if keys[pygame.K_UP]:
             y_block -= 15
         if keys[pygame.K_DOWN]:
