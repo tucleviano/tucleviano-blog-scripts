@@ -22,9 +22,6 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_UP:
-                    y_block -= 100
 
         platform = pygame.Rect(0, height - 50, platform_width, platform_height)
         block = pygame.Rect(x_block, y_block, block_width, block_height)
@@ -34,13 +31,13 @@ def main():
 
         # Movimentação do bloco
         if keys[pygame.K_UP]:
-            y_block -= 15
+            y_block -= 10
         if keys[pygame.K_DOWN]:
-            y_block += 15
+            y_block += 10
         if keys[pygame.K_LEFT]:
-            x_block -= 15
+            x_block -= 10
         if keys[pygame.K_RIGHT]:
-            x_block += 15
+            x_block += 10
 
         # Colisões com a tela
         if block.left < 0:
